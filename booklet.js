@@ -49,4 +49,91 @@ let descuento1 = precio - (precio * 0.2)
 
 alert("El valor es: " + descuento1)*/
 
-//---------------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------------------------------------------------------
+CLASE 2*/
+
+//Actividad 1
+/*Solicitar al usuario un (1) nombre.
+Si el mismo es igual a otro nombre almacenado en una variable, realizar una salida por alerta con el mensaje “Fui yo”. 
+Caso contrario, la salida será “Yo no fui”. */
+
+/*
+let usuario = prompt("Ingrese el nombre del delincuente")
+let delincuente = "Bart"
+if(usuario == "Bart"){
+    alert("Yo fui")
+}else{
+    alert("Yo no fui")
+}*/
+
+/* Actividad 2
+Solicitar al usuario una (1) tecla.
+Si se presiona “y” (minúscula), o “Y” (mayúscula), realizar una salida por alerta con el mensaje “Correcto”. Caso contrario, la salida será “Error”.*/
+
+/*
+let tecla = prompt("Elja una tecla")
+if ((tecla == "y") || (tecla == "Y")){
+    alert("Correcto");
+} else {
+    alert("Error");
+}
+*/
+
+/*Actividad 3
+Solicitar al usuario un (1) un número.
+Si el valor está entre 1 y 4, efectuar una de las siguientes salidas según corresponda: 
+“Elegiste a Homero” si es 1.
+“Elegiste a Marge” si es 2.
+“Elegiste a Bart” si es 3.
+“Elegiste a Lisa” si es 4.
+*/
+
+/*
+let numero = prompt("Elije un numero")
+if (numero==1){
+    alert("Elegiste a Homero")
+}else if (numero==2){
+    alert("Elegiste a Marge")
+}else if (numero==3){
+    alert("Elegiste a Bart")
+}else if (numero==4){
+    alert("Elegiste a Lisa")
+}else{
+    alert("El numero ingresado no es correcto")
+}
+*/
+
+/*Actividad 4
+Solicitar al usuario un (1) número.
+Si el valor está entre dos números, efectuar una de las siguientes salidas, según corresponda: 
+“Presupuesto bajo” si está entre 0 y 1000.
+“Presupuesto medio” si está entre 1001 y 3000.
+“Presupuesto alto” si es  mayor que 3000.
+*/
+
+/*
+let numero = prompt("Ingrese un numero")
+if (numero <= 1000){
+    alert("Presupuesto bajo")
+} else if ((numero =>1000) && (numero <= 3000)){
+    alert("Presupuesto Medio")
+}else {
+    alert("Presupuesto alto")   
+}
+
+*/
+
+/*Actividad 5
+Solicitar al usuario cuatro (4) productos de almacén. Si todos los elementos fueron cargados, realizar una única salida compuesta por el listado de productos. Caso contrario, la salida será “Error: Es necesario cargar todos los productos”.*/  
+
+/*
+let producto1 = prompt("Ingrese el primer producto")
+let producto2 = prompt("Ingrese el segundo producto")
+let producto3 = prompt("Ingrese el tercer producto")
+let producto4 = prompt("Ingrese el cuarto producto")
+if ((producto1 !="") && (producto2!="") && (producto3!="") && (producto4!="")){
+    alert(producto1 + " " + producto2 + " " + producto3 + " " + producto4 )
+}else {
+    alert("Error: Es necesario cargar todos los productos")
+}
+*/
