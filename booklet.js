@@ -332,3 +332,143 @@ while (entrada != "ESC"){
 
 // CLASE 5
 
+/* Actividad 1
+--------------- 
+Declarar un clase Tienda que permita registrar:
+Nombre de la tienda.
+Dirección de la tienda.
+Propietario de la tienda.
+Rubro de la tienda.
+Luego invocar al menos tres (3) objetos usando esta clase.
+---------------
+
+
+class Tienda{
+    constructor (nombreTienda, direccionTienda, propietarioTienda, rubroTienda) {
+        this.nombre = nombreTienda
+        this.direccion = direccionTienda
+        this.propietario = propietarioTienda
+        this.rubro = rubroTienda
+    }
+}
+
+const tiendaUno = new Tienda(prompt("Ingrese el nombre de la tienda"), prompt("Ingrese la direccion de la tienda"), prompt("Ingrese el nombre del propietario de la tienda"), prompt("Ingrese el rubro de la tienda"))
+console.log (tiendaUno.nombre +"\n"+ tiendaUno.direccion + "\n"+ tiendaUno.propietario)
+*/
+
+/* Actividad 2
+--------------- 
+Solicitar al usuario el registro de cinco (5) tiendas.
+Emplear la clase Tienda de la actividad 1, para instanciar los objetos en función de las entradas capturadas. Generar una única salida compuesta por la información de los objetos instanciados.
+---------------
+let ingresados = ""
+for (let i=0; i <= 5; i++){
+    let tienda = new Tienda(prompt("Ingrese el nombre de la tienda"), prompt("Ingrese la direccion de la tienda"), prompt("Ingrese el nombre del propietario"), prompt("Ingrese el rubro"))
+    ingresados+= "Tienda: "+tienda.nombre+" "+
+    "Direccion: "+tienda.direccion+" "+
+    "Propitario: "+tienda.propietario+" "+
+    "rubro: "+tienda.rubro+"\n"
+}
+alert(ingresados)
+*/
+
+/* Actividad 3
+--------------- 
+Declarar un método para la clase Tienda con la siguiente cabecera estaAbierto(hora). Este retorna true si la hora enviada está entre las 08 y 12, o entre las 15 y 19. Caso contrario, se retorna false.
+Luego invocar al menos un (1) objeto usando esta clase, y solicitar al usuario tres (3) horas. Informar por alerta si la tienda está abierta, en función de la hora ingresada.
+---------------
+
+class Tienda {
+    constructor (nombre, direccion, rubro){
+        this.nombre = nombre
+        this.direccion = direccion
+        this.rubro = rubro
+        
+    }
+    apertura(hora){
+        if (((hora >= 8) && (hora <= 12)) || ((hora >= 15 ) && (hora <= 19))){
+            return true
+        }else{
+            return false
+        }
+    } 
+}
+const tienda1 = new Tienda ("Pepe", "Cosme fulanito 123", "Electrodomesticos")
+for (let i = 0; i < 3; i++ ){
+    let entrada = parseInt(prompt("Ingrese una hora"))
+    if (tienda1.apertura(entrada)){
+        alert("Esta abierto")
+    }else{
+        alert("La tienda se encuentra cerrada")
+    }
+}
+*/
+
+/* Actividad 4
+--------------- 
+Declarar un método para la clase Tienda con la siguiente cabecera esPropietario(nombre). Se retorna true si el nombre enviado corresponde al propietario de la tienda.Caso contrario, se retorna false.
+Luego, invocar al menos tres(3) objetos usando esta clase y solicitar al usuario cinco(5) nombres. Informar por alerta si los nombres pertenecen a algún dueño de tienda.
+---------------
+
+class Tienda{
+    constructor (propietario, direccion, rubro){
+        this.propietario = propietario
+        this.direccion = direccion
+        this.rubro = rubro
+    }
+    verificacion(entrada){
+        if (entrada == "Alberto"){
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+const tiendaDos = new Tienda("Alberto", "calle falsa 123", "Electrodomesticos") 
+
+for (i = 0; i <=5; i++){
+    let entrada = prompt("Ingrese un nombre")
+    if (tiendaDos.verificacion(entrada)){
+        alert("Bienvenido jefe")
+        alert(tiendaDos.propietario + "\n" + tiendaDos.direccion + "\n" + tiendaDos.rubro)
+    } else{
+        alert("Usted no es el jefe")
+    }
+}
+*/
+
+
+/* Actividad 5
+--------------- 
+Declarar una clase Cliente que permita:
+Registrar nombre, presupuesto, si tiene tarjeta de descuento, y número de teléfono del cliente.
+Un método transferirDinero(valor), que permita  obtener y restar cierta cantidad del presupuesto, siempre que este parámetro sea menor al valor enviado, y mayor que cero.
+Luego invocar al menos tres (3) objetos usando esta clase, y solicitar al usuario cinco (5) números. Informar por alerta si cada uno de los clientes cuenta con el presupuesto suficiente para realizar una transferencia de igual monto al ingresado.
+---------------
+
+class Cliente{
+    constructor (nombre, presupuesto, descuento, telefono){
+        this.nombre = nombre
+        this.presupuesto = parseFloat(presupuesto)
+        this.descuento = descuento
+        this.telefono = telefono
+    }
+
+    transferirDinero(valor){
+        if((this.presupuesto > 0)&& (valor <= this.presupuesto)) {
+            this.presupuesto -= valor 
+            return valor
+        } else {
+            return alert("transferencia no valida")
+        }
+    }
+}
+const clienteUno = new Cliente("Cosme Fulanito", 3000, "Si", 15125125)
+
+for (i = 0; i < 5; i++){
+    let dinero = parseFloat(prompt("Ingrese cantidad a enviar"))    
+    if (clienteUno.transferirDinero(dinero)){
+        alert("El cliente " + clienteUno.nombre+ " te acaba de enviar "+dinero + "\n" + "Te restan en la cuenta un total de $" + clienteUno.presupuesto);
+    }
+}*/
